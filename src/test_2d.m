@@ -3,10 +3,10 @@ clear
 clc
 
 % config
-x_range = 20; % 10*2
-y_range = 20; % 10*2
-obstacle_swell = 0.1;
-grid_resolution = 0.4;
+x_range = 15; % 10*2
+y_range = 15; % 10*2
+obstacle_swell = 0.0;
+grid_resolution = 0.3;
 xgrid_num = round(x_range*2/grid_resolution);
 ygrid_num = round(y_range*2/grid_resolution);
 
@@ -34,7 +34,7 @@ for lidar_frame_i = 1:960
     old_show_grid = filtered_grid;
     
     % visualization
-    visualgrid(filtered_grid, pose_center);
-    pause(0.001);
+    visualgrid(filtered_grid, pose_center, lidar_frame_i);
+    pause(0.01);
 end
 

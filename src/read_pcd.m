@@ -6,7 +6,7 @@ ptCloud = pcread(file_path);
 
 % get the single line of 3d pointcloud
 plocation = ptCloud.Location();
-mask = ((plocation(:, 3) - 0) < 1e-3) & ((plocation(:, 3) - 0) > -1e-3);
+mask = ((plocation(:, 3) - 0) < 2e-3) & ((plocation(:, 3) - 0) > -2e-3);
 single_line_location = plocation(mask, :);
 single_line_location(:, 3) = 0;
 % singlept = pointCloud(single_line_location);
